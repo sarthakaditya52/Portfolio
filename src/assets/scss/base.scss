@@ -1,0 +1,8 @@
+@import './variables';
+@import './fonts';
+
+body {
+    background-color: $default;
+}
+
+@import './navbar';

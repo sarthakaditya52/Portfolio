@@ -1,0 +1,93 @@
+.navbar {
+    background-color: $default;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+    font-family: 'Quicksand';
+
+    .nav-brand{
+        margin-left: 0.75rem;
+
+        .brand-logo {
+            color: $green !important;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        .navbar-toggler-icon{
+            background: none;
+        }
+    }
+
+    .nav-icon {
+        width: 30px;
+        
+        &:after, 
+        &:before, 
+        & div {
+            color: $white;
+            background-color: $white;
+            border-radius: 4px;
+            content: '';
+            display: block;
+            height: 3px;
+            margin: 6px 0;
+            transition: all .2s ease-in-out;
+        }
+    
+        &.active:before {
+            transform: translateY(11px) rotate(135deg);
+        }
+          
+        &.active:after {
+            transform: translateY(-7px) rotate(-135deg);
+        }
+      
+        &.active div {
+            transform: scale(0);
+        }
+    }
+
+    .nav-links-container{
+        display: flex;
+        justify-content: center;
+        margin-right: 0.75rem;
+        font-size: $nav-size;
+        padding: 5px 0 5px 0;
+
+        .nav-link-index {
+            color: $green;
+            margin-right: 4px;
+        }
+        .nav-link-label {
+            color: $white;
+        }
+    }
+
+    .nav-link-resume {
+        margin-right: 1.75rem;
+        color: $green !important;
+
+        .resume-link {
+            border-radius: 7px;
+            padding: 5px 10px 5px 10px;
+            border: 2px solid $green;
+        }
+    }
+
+}
+
+@media (max-width: 991px) {
+    .nav-links-container, .nav-link-resume{
+        margin: 10px;
+        font-size: 22px !important;
+    }
+
+    .nav-link-resume {
+        display: flex;
+        justify-content: center;
+
+        .resume-link {
+            margin-left: 30px;
+        }
+    }
+}
