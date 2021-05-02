@@ -37,6 +37,8 @@ $danger:        $red !default;
 $light:         $gray-500 !default;
 $dark:          $gray-900 !default;
 $darker:        darken($gray-900, 15%) !default;
+$default-text:  $gray-400 !default;
+$primary-text:  $green;
 
 // Sizes
 $nav-size: 18px;

@@ -1,8 +1,25 @@
 @import './variables';
 @import './fonts';
 
+* { margin:0; padding:0; box-sizing:border-box; }
+
 body {
     background-color: $default;
 }
 
+.base {
+    max-width: 100%;
+}
+
+.base-small {
+    position: sticky;
+}
+
+@media (max-width: 540px) {
+    .base-small {
+        display: none
+    }
+}
+
 @import './navbar';
+@import './home';

@@ -1,0 +1,59 @@
+.home-container {
+    margin: 5rem 0 0 5rem;
+    font-family: 'Montserrat';
+    h5 {
+        color: $primary-text;
+    }
+    h1 {
+        font-size: 6.5vw;
+        font-weight: bolder;
+        color: $gray-200;
+    }
+    h2 {
+        font-size: 5vw;
+        color: $gray-600;
+    }
+    .home-content {
+        margin-top: 1.5rem;
+        color: $default-text;
+        width: 60%;
+    }
+    span a {
+        color: $primary-text;
+        text-decoration: none;
+        position: relative;
+        transition: all 500ms;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $primary-text;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+            visibility: visible;
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 540px) {
+    .home-container {
+        margin: 2rem 0 0 0;
+        h1 {
+            font-size: 8vw;
+        }
+        h2 {
+            font-size: 7.25vw;
+        }
+        .home-content {
+            margin-top: 0.75rem;
+            width: 100%;
+        }
+    }
+}
