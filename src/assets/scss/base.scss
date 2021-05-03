@@ -5,6 +5,7 @@
 
 body {
     background-color: $default;
+    font-family: 'Montserrat';
 }
 
 .base {
@@ -24,3 +25,4 @@ body {
 @import './navbar';
 @import './home';
 @import './sectionHeading';
+@import './about';

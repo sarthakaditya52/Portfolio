@@ -1,6 +1,5 @@
 .home-container {
     margin: 5rem 0 0 5rem;
-    font-family: 'Montserrat';
     h5 {
         color: $primary-text;
     }
@@ -17,34 +16,47 @@
         margin-top: 1.5rem;
         color: $default-text;
         width: 60%;
-    }
-    span a {
-        color: $primary-text;
-        text-decoration: none;
-        position: relative;
-        transition: all 500ms;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: $primary-text;
-            visibility: hidden;
-            transition: all 0.3s ease-in-out;
+
+        span a {
+            color: $primary-text;
+            text-decoration: none;
+            position: relative;
+            transition: all 500ms;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: $primary-text;
+                visibility: hidden;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover::before {
+                visibility: visible;
+                width: 100%;
+            }
         }
-        &:hover::before {
-            visibility: visible;
-            width: 100%;
+    }
+    
+    .home-about-btn {
+        margin-top: 3rem;
+        border: 2px solid $primary-text;
+        background-color: transparent;
+        a {
+            text-decoration: none;
+            font-family: 'Quicksand';
+            color: $primary-text;
         }
     }
 }
 
 
-@media (max-width: 540px) {
+@media (max-width: 1024px) {
     .home-container {
         margin: 2rem 0 0 0;
+        height: auto;
         h1 {
             font-size: 8vw;
         }
@@ -54,6 +66,9 @@
         .home-content {
             margin-top: 0.75rem;
             width: 100%;
+        }
+        .home-about-btn {
+            margin-top: 2rem;
         }
     }
 }

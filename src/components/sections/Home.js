@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
 
 function Home() {
     return (
@@ -11,6 +12,9 @@ function Home() {
                 Currently, I'm working as a freelancer and looking for an opportunity to work for a company where I can work on 
                 exciting and challenging projects.
             </div>
+            <Button className="home-about-btn" size='lg'>
+                <a href="#about">See More</a>
+            </Button>
         </div>
     )
 }

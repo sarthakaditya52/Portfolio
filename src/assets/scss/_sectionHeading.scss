@@ -1,6 +1,9 @@
 .section-heading-container{
     display: flex;
     align-items: baseline;
+    margin: 4rem 0 0 0.35rem;
+    font-family: 'Quicksand';
+
     .section-heading-index {
         color: $primary-text;
         font-size: $section-index;
@@ -17,5 +20,11 @@
         width: 50%;
         border-radius: 2px;
         height: 2px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-heading-container{
+        margin: 2rem 0 0 0;
     }
 }
