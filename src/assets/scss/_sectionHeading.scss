@@ -1,0 +1,21 @@
+.section-heading-container{
+    display: flex;
+    align-items: baseline;
+    .section-heading-index {
+        color: $primary-text;
+        font-size: $section-index;
+        margin-right: 8px;
+    }
+    .section-heading {
+        font-size: $section-heading;
+        color: $white;
+    }
+    .head-underline {
+        align-self: center;
+        margin: 0.5rem 2rem 0 0.75rem;
+        background-color: rgba(173, 173, 173, 0.14);
+        width: 50%;
+        border-radius: 2px;
+        height: 2px;
+    }
+}
