@@ -3,6 +3,7 @@ import NavBar from "./components/navbar/NavBar"
 import { Container, Row, Col } from "react-bootstrap";
 import Home from "./components/sections/Home";
 import About from './components/sections/About';
+import Experiences from './components/sections/experiences';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Col>
             <Home />
             <About />
+            <Experiences />
           </Col>
           <Col className="base-small" xs={1}>3 of 3</Col>
         </Row>

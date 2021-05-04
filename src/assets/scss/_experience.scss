@@ -1,0 +1,136 @@
+.experience-container{
+    margin-top: $section-top;
+    color: $white;
+
+    .company-container {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        font-family: 'Quicksand';
+
+        .company-button{
+            background-color: transparent;
+            border-radius: 0;
+            border: none;
+            border-left: 0.19rem solid $primary;
+            height: 3.5rem;
+            transition: all 330ms;
+
+            &:hover {
+                background-color: $primary;
+            }
+
+            &.active {
+                background-color: $primary;
+                border-left: 0.19rem solid $primary-text;
+            }
+        }
+        .btn-primary:not(:disabled):not(.disabled).active{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    
+    .desc-container {
+        margin-left: 2rem;
+
+        .description {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+
+            &.active {
+                width: 100%;
+                height: 100%;
+            }
+
+            .desc-heading-container{
+                display: flex;
+                align-items: baseline;
+                font-size: 2.5vw;
+                font-weight: 900;
+                margin-bottom: 0.5rem;
+    
+                .desc-heading-index {
+                    color: $gray-600;
+                    margin-right: 8px;
+                }
+    
+                .desc-heading {
+                    color: $primary-text;
+                }
+            }
+        }
+
+        .fade-in {
+            opacity: 1;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 330ms;
+    
+            @keyframes fadeInOpacity {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+
+        p {
+            font-family: 'Quicksand';
+        }
+
+        .desc-info {
+            margin-top: -0.3rem;
+
+            span {
+                display: flex;
+                align-items: center;
+                color: $primary-text;
+                font-family: 'Quicksand';
+
+                .desc-info-item{
+                    color: $default-text;
+                    font-family: 'Montserrat';
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .experience-container{
+        .desc-container {
+            margin-top: 1rem;
+
+            .description{
+                .desc-heading-container{
+                    flex: wrap;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .company-container {
+            flex-direction: row;
+            width: 100%;
+            overflow-x: scroll;
+            .company-button{
+                border: none;
+                border-bottom: 0.19rem solid $primary;
+
+                &.active {
+                    border: none;
+                    border-bottom: 0.19rem solid $primary-text;
+                }
+            }
+        }
+    }
+}
