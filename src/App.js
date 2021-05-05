@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Home from "./components/sections/Home";
 import About from './components/sections/About';
 import Experiences from './components/sections/experiences';
+import Projects from './components/sections/projects';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Home />
             <About />
             <Experiences />
+            <Projects />
           </Col>
           <Col className="base-small" xs={1}>3 of 3</Col>
         </Row>
