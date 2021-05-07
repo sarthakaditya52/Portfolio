@@ -23,6 +23,14 @@
     }
 }
 
+.section-sub-heading {
+    font-family: 'Quicksand';
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: $gray-600;
+}
+
 @media (max-width: 1024px) {
     .section-heading-container{
         margin: 2rem 0 0 0;
