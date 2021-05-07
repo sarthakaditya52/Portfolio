@@ -1,0 +1,48 @@
+.col-container {
+    color: $default-text;
+    position: fixed;
+    bottom: 0;
+    list-style: none;
+    margin: 0;
+
+    .col-content {
+        writing-mode: vertical-rl;
+        margin: 20px auto -10px auto;
+        a {
+            margin: 10px;
+            font-family: 'Quicksand';
+            text-decoration: none;
+            color: $default-text;
+            font-size: 15px;
+            transition: all 300ms;
+
+            &:hover {
+                color: $primary-text;
+                margin: 13px;
+            }
+        }
+    }
+
+    li {
+        // margin-top: 10px;
+        a > i{
+            margin: 8px 12px 8px 12px;
+            text-decoration: none;
+            font-size: 25px;
+            color: $default-text;
+            transition: all 300ms;
+
+            &:hover {
+                color: $primary-text;
+                margin: 6px 12px 10px 12px;
+            }
+        }
+    }
+    .col-underline {
+        margin: 20px 20px 0 20px;
+        background-color: $gray-600;
+        width: 3px;
+        border-radius: 2px;
+        height: 100px;
+    }
+}

@@ -6,6 +6,8 @@ import About from './components/sections/About';
 import Experiences from './components/sections/experiences';
 import Projects from './components/sections/projects';
 import Contact from './components/sections/Contact';
+import LeftCol from './components/sections/LeftCol';
+import RightCol from './components/sections/RightCol';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       <NavBar />
       <Container className="base">
         <Row>
-          <Col className="base-small" xs={1}>1 of 3</Col>
+          <Col className="base-small" xs={1}>
+            <LeftCol />
+          </Col>
           <Col>
             <Home />
             <About />
@@ -24,7 +28,9 @@ function App() {
               Made by <span>Sarthak Aditya</span>
             </footer>
           </Col>
-          <Col className="base-small" xs={1}>3 of 3</Col>
+          <Col className="base-small" xs={1}>
+            <RightCol />
+          </Col>
         </Row>
       </Container>
     </div>
