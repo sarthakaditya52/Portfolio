@@ -1,0 +1,49 @@
+.contact-head {
+    font-family: 'Quicksand';
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 4.3vw;
+    font-weight: 900;
+    color: $gray-200;
+}
+
+.contact-desc {
+    margin: 1.5rem 0 1.5rem 0;
+    font-size: 1.25rem;
+    color: $default-text;
+    text-align: center;
+}
+
+.email-btn {
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    a {
+        font-size: 1.25rem;
+        text-decoration: none;
+        color: $primary-text;
+        position: relative;
+        transition: all 800ms;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $primary-text;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+            visibility: visible;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-head {
+        font-size: 6.8vw;
+    }
+}

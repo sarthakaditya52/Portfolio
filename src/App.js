@@ -5,6 +5,7 @@ import Home from "./components/sections/Home";
 import About from './components/sections/About';
 import Experiences from './components/sections/experiences';
 import Projects from './components/sections/projects';
+import Contact from './components/sections/Contact';
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
             <About />
             <Experiences />
             <Projects />
+            <Contact />
+            <footer>
+              Made by <span>Sarthak Aditya</span>
+            </footer>
           </Col>
           <Col className="base-small" xs={1}>3 of 3</Col>
         </Row>
