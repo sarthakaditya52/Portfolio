@@ -1,5 +1,5 @@
 import alShita from '../../../assets/images/alShita.png'
-// import rootAndLeaves from '../../../assets/images/rootAndLeaves.png'
+import personalWebsite from '../../../assets/images/personalWebsite.png'
 
 export const featuredProjects = [
     {
@@ -10,6 +10,14 @@ export const featuredProjects = [
         gitlink: "https://github.com/sarthakaditya52/Al-Shita",
         livelink: "https://al-shita.herokuapp.com",
         image: alShita
+    },
+    {
+        titile: "Personal Website",
+        desc: "My personal portfolio website built using React.js, SCSS and hosted on Github Pages.",
+        tech: ["React.js", "SCSS", "Bootstrap"],
+        gitlink: "https://github.com/sarthakaditya52/portfolio",
+        livelink: "https://sarthak.github.io",
+        image: personalWebsite
     }
 ]
 

@@ -13,7 +13,7 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
     }
     &.nav-no-shadow {
-        background-color: $default;
+        background-color: transparent;
         box-shadow: none; 
     }
     
@@ -101,17 +101,29 @@
 }
 
 @media (max-width: 991px) {
-    .nav-links-container, .nav-link-resume{
-        margin: 10px;
-        font-size: 22px !important;
-    }
+    .navbar {
+        top: -100%;
+        transition: all 500ms;
+        background-color: transparent;
 
-    .nav-link-resume {
-        display: flex;
-        justify-content: center;
+        &.nav-show {
+            top: 0;
+            background-color: #121210e8;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+        }
 
-        .resume-link {
-            margin-left: 30px;
+        .nav-links-container, .nav-link-resume{
+            margin: 10px;
+            font-size: 22px !important;
+        }
+
+        .nav-link-resume {
+            display: flex;
+            justify-content: center;
+
+            .resume-link {
+                margin-left: 30px;
+            }
         }
     }
 }

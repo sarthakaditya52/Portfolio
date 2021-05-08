@@ -9,10 +9,14 @@ import Contact from './sections/Contact'
 import LeftCol from './sections/LeftCol'
 import RightCol from './sections/RightCol'
 import { useLocation } from "react-router-dom"
+import { TransitionGroup, Transition } from 'react-transition-group' 
+import { play } from './Timelines'
 
 function Main() {
 
   const location = useLocation()
+
+  const { hash, key } = location;
 
   const home = useRef(null)
   const about = useRef(null)
@@ -48,6 +52,13 @@ function Main() {
   }
 
   return (
+    <TransitionGroup component={null}>
+    <Transition
+      key={key}
+      appear={true}
+      onEnter={(node, appears) => play(hash, node, appears)}
+      timeout={{enter: 750, exit: 0}}
+    >
     <div>
       <NavBar
         linkClick={(ref) => scrollToDiv(ref)}
@@ -77,6 +88,8 @@ function Main() {
         </Row>
       </Container>
     </div>
+    </Transition>
+    </TransitionGroup>
   )
 }
 
