@@ -15,8 +15,8 @@ export const featuredProjects = [
         titile: "Personal Website",
         desc: "My personal portfolio website built using React.js, SCSS and hosted on Github Pages.",
         tech: ["React.js", "SCSS", "Bootstrap"],
-        gitlink: "https://github.com/sarthakaditya52/portfolio",
-        livelink: "https://sarthak.github.io",
+        gitlink: "https://github.com/sarthakaditya52/Portfolio",
+        livelink: "https://sarthakaditya52.github.io",
         image: personalWebsite
     }
 ]
