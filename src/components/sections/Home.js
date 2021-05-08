@@ -1,9 +1,8 @@
-import React from 'react'
-import { Button } from 'react-bootstrap'
+import React, { forwardRef } from 'react'
 
-function Home() {
+const Home = forwardRef((props, ref) => {
     return (
-        <div className="home-container">
+        <div ref={ref} className="home-container">
             <h5>Hello, my name is</h5>
             <h1>Sarthak Aditya.</h1>
             <h2>I'm a fullstack developer.</h2>
@@ -12,11 +11,11 @@ function Home() {
                 Currently, I'm working as a freelancer and looking for an opportunity to work for a company where I can work on 
                 exciting and challenging projects.
             </div>
-            <Button className="home-about-btn" size='lg'>
+            <div onClick={() => props.linkClick(props.aboutRef)} className="home-about-btn" size='lg'>
                 <a href="#about">See More</a>
-            </Button>
+            </div>
         </div>
     )
-}
+})
 
 export default Home

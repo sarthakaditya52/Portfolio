@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Background from './components/Background'
 import Main from './components/Main'
 import SplashScreen from './components/SplashScreen'
+import { BrowserRouter as Router } from "react-router-dom"
 
 function App() {
 
@@ -34,7 +35,9 @@ function App() {
         :
         <>
           <Background />
-          <Main />
+          <Router >
+            <Main />
+          </Router>
         </>
       }
     </div>

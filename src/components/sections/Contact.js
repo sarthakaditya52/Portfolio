@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import SectionHeading from '../SectionHeading'
 
-function Contact() {
+const Contact = forwardRef((props, ref) => {
     return (
-        <div>
+        <div ref={ref}>
             <SectionHeading index={4} heading="Contact" />
             <div className="contact-head">
                 Get In Touch
@@ -17,6 +17,6 @@ function Contact() {
             </div>
         </div>
     )
-}
+})
 
 export default Contact

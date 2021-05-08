@@ -43,8 +43,10 @@
     .home-about-btn {
         margin-top: 3rem;
         margin-bottom: 3rem;
+        border-radius: 7px;
+        padding: 5px 10px 5px 10px;
         border: 2px solid $primary-text;
-        background-color: transparent;
+        width: fit-content;
         a {
             text-decoration: none;
             font-family: 'Quicksand';

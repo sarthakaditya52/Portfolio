@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
 import Logo from '../Logo'
+import resume from '../../assets/files/resume.pdf'
 import { navLinks } from './navLinks'
 
-function NavBar() {
+function NavBar({linkClick, refs}) {
 
     const [prevScrollPos, setPrevScrollPos] = useState(0)
     const [visible, setVisible] = useState(true)  
@@ -56,7 +57,7 @@ function NavBar() {
             <Navbar.Collapse ref={navRef} id="responsive-navbar-nav">
                 <Nav className="ml-auto">
                     {navLinks.map((link, index) =>
-                        <Nav.Link key={index} href={link.address}>
+                        <Nav.Link key={index} onClick={() => linkClick(refs[index])} href={link.address}>
                             <span className="nav-links-container">
                                 <div className="nav-link-index">
                                     {(index + 1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})}.
@@ -67,7 +68,7 @@ function NavBar() {
                             </span>
                         </Nav.Link>
                     )}
-                    <Nav.Link className="nav-link-resume">
+                    <Nav.Link href={resume} className="nav-link-resume" download="Sarthak_Aditya_Fullstack">
                         <div className="resume-link">
                             Resume
                         </div>

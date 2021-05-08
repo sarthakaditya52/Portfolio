@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { forwardRef, useState } from 'react'
 import { Button, Col, Container, ListGroup, Row } from 'react-bootstrap'
 import SectionHeading from '../../SectionHeading'
 import experiences from './experiences.data'
 
-function Experiences() {
+const Experiences = forwardRef((props, ref) => {
 
     const [index, setIndex] = useState(0)
 
     return (
-        <div>
+        <div ref={ref}>
             <SectionHeading index={2} heading="Experiences" />
             <Container className="experience-container">
                 <Row>
@@ -52,6 +52,6 @@ function Experiences() {
             </Container>
         </div>
     )
-}
+})
 
 export default Experiences

@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Container, Image, Table } from 'react-bootstrap'
 import SectionHeading from '../SectionHeading'
 import me from '../../assets/images/me.jpg'
 
-function About() {
+const About = forwardRef((props, ref) => {
     return (
-        <div>
+        <div ref={ref}>
             <SectionHeading index={1} heading="About" />
             <Container>
                 <div className="about-section-container">
@@ -90,6 +90,6 @@ function About() {
             </Container>
         </div>
     )
-}
+})
 
 export default About

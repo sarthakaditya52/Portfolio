@@ -1,29 +1,72 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import NavBar from "./navbar/NavBar"
-import { Container, Row, Col } from "react-bootstrap";
-import Home from "./sections/Home";
-import About from './sections/About';
-import Experiences from './sections/experiences';
-import Projects from './sections/projects';
-import Contact from './sections/Contact';
-import LeftCol from './sections/LeftCol';
-import RightCol from './sections/RightCol';
+import { Container, Row, Col } from "react-bootstrap"
+import Home from "./sections/Home"
+import About from './sections/About'
+import Experiences from './sections/experiences'
+import Projects from './sections/projects'
+import Contact from './sections/Contact'
+import LeftCol from './sections/LeftCol'
+import RightCol from './sections/RightCol'
+import { useLocation } from "react-router-dom"
 
 function Main() {
+
+  const location = useLocation()
+
+  const home = useRef(null)
+  const about = useRef(null)
+  const experiences = useRef(null)
+  const projects = useRef(null)
+  const contact = useRef(null)
+
+  useEffect(() => {
+
+    switch (location.hash) {
+      case "#home":
+        scrollToDiv(home)
+        break
+      case "#about":
+        scrollToDiv(about)
+        break
+      case "#experiences":
+        scrollToDiv(experiences)
+        break
+      case "#projects":
+        scrollToDiv(projects)
+        break
+      case "#contact":
+        scrollToDiv(contact)
+        break
+      default:
+      // ignore
+    }
+  }, [location])
+
+  const scrollToDiv = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <div>
-      <NavBar />
+      <NavBar
+        linkClick={(ref) => scrollToDiv(ref)}
+        refs={[ about, experiences, projects, contact ]}
+      />
       <Container className="base">
         <Row>
           <Col className="base-small" xs={1}>
             <LeftCol />
           </Col>
           <Col>
-            <Home />
-            <About />
-            <Experiences />
-            <Projects />
-            <Contact />
+            <Home
+              linkClick={(ref) => scrollToDiv(ref)}
+              aboutRef={about}
+              ref={home} />
+            <About ref={about} />
+            <Experiences ref={experiences} />
+            <Projects ref={projects} />
+            <Contact ref={contact} />
             <footer>
               Made by <span>Sarthak Aditya</span>
             </footer>
@@ -37,4 +80,4 @@ function Main() {
   )
 }
 
-export default Main;
+export default Main

@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import SectionHeading from '../../SectionHeading'
 import MoreProjects from './MoreProjects'
 import { featuredProjects } from './projects.data'
 
-function Projects() {
+const Projects = forwardRef((props, ref) => {
     return (
         <>
-            <div>
+            <div ref={ref}>
                 <SectionHeading index={3} heading={"My Projects"} />
                 <Container className="featured-project-container">
                     {featuredProjects.map((project, index) => 
@@ -46,6 +46,6 @@ function Projects() {
             <MoreProjects />
         </>
     )
-}
+})
 
 export default Projects
