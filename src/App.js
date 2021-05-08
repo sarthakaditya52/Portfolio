@@ -9,6 +9,8 @@ function App() {
   const [splash, setSplash] = useState(true)
 
   useEffect(() => {
+
+    document.title = "Sarthak Aditya"
     
     document.body.classList.add("bg-dark-black")        
 

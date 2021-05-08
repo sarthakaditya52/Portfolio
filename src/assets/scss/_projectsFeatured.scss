@@ -73,6 +73,15 @@
             &.odd {
                 grid-column: 1 / 7;
                 text-align: left;
+
+                .project-tech {
+                    & label {
+                        font-family: 'Quicksand';
+                        font-size: 0.75rem;
+                        color: $default-text;
+                        margin: 2rem 1.75rem 1rem 0;
+                    }
+                }
             }
 
             .project-heading {
