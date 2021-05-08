@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Background from './components/Background'
 import Main from './components/Main'
 import SplashScreen from './components/SplashScreen'
 
@@ -31,7 +32,10 @@ function App() {
       {splash ? 
         <SplashScreen />
         :
-        <Main />
+        <>
+          <Background />
+          <Main />
+        </>
       }
     </div>
   )

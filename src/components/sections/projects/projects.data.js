@@ -32,7 +32,7 @@ export const projects = [
     },
     {
         titile: "UnSplash",
-        desc: "A utter application for displaying images with innite scroll using Unsplash api.",
+        desc: "A Flutter application for displaying images with innite scroll using Unsplash api.",
         tech: ["Flutter", "Unsplash Api"],
         gitlink: "https://github.com/sarthakaditya52/UnSplash",
         icon:"fas fa-mobile"
