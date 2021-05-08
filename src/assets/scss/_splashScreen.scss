@@ -1,0 +1,26 @@
+.splash-screen-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo {
+    max-width: 100px;
+    opacity: 1;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        fill: none;
+      }
+      
+    &.nav-logo-item {
+        max-width: 34px;
+    }
+
+}

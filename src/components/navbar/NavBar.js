@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
+import Logo from '../Logo'
 import { navLinks } from './navLinks'
 
 function NavBar() {
@@ -43,7 +44,7 @@ function NavBar() {
     return (
         <Navbar className={`${visible ? "nav-show" : "nav-show-not"} ${prevScrollPos === 0 && "nav-no-shadow nav-show"}`}expand="lg">
             <Navbar.Brand className="nav-brand" href="#home">
-                LOGO
+                <Logo nav={true} />
             </Navbar.Brand>
             <span onClick={toggleShow}>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav">
