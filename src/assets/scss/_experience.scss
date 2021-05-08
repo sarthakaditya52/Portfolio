@@ -33,6 +33,7 @@
     
     .desc-container {
         margin-left: 2rem;
+        min-height: 350px;
 
         .description {
             height: 0;
@@ -107,6 +108,7 @@
     .experience-container{
         .desc-container {
             margin-top: 1rem;
+            min-height: auto;
 
             .description{
                 .desc-heading-container{

@@ -1,8 +1,22 @@
 .navbar {
     background-color: $default;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
     font-family: 'Quicksand';
+    z-index: 10;
+    top: -100px;
+    position: fixed;
+    width: 100%;
+    transition: all 300ms;
 
+    &.nav-show {
+        top: 0;
+        background-color: #121210e8;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+    }
+    &.nav-no-shadow {
+        background-color: $default;
+        box-shadow: none; 
+    }
+    
     .nav-brand{
         margin-left: 0.75rem;
 

@@ -29,7 +29,7 @@
                 background-color: $primary-text-dark;
                 box-shadow: 0 10px 30px -15px $black;
                 border-radius: .25rem;
-                opacity: 0.9;
+                opacity: 1;
                 transition: all 800ms;
 
                 a {
@@ -45,7 +45,7 @@
                         object-position: center center;
                         max-width: 100%;
                         vertical-align: middle;
-                        opacity: 0.4;
+                        opacity: 0.5;
                         box-shadow: 0 10px 30px -15px $black;
                         transition: all 800ms;
         
@@ -55,7 +55,6 @@
                     }
                 }
                 &:hover {
-                    opacity: 1;
                     background-color: transparent;
                 }
             }

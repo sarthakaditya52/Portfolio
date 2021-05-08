@@ -1,21 +1,36 @@
 .about-section-container {
     display: flex;
     margin-top: $section-top;
-    .about-section-image {
-        display: flex;
-        justify-content: center;
-        img {
-            width: 100%;
-            height: 30vw;
-            opacity: 0.5;
-            transition: all 300ms;
-            transform: scale(.99);
-            &:hover {
-                opacity: 1;
-                transform: scale(1);
+    
+    .image-blurbox{
+        height: 30vw;
+        max-height: 540px;
+        background-color: $primary-text-dark;
+        border-radius: .25rem;
+        opacity: 1;
+        transition: all 800ms;
+
+        .about-section-image {
+            display: flex;
+            justify-content: center;
+            img {
+                // width: 100%;
+                height: 30vw;
+                max-height: 540px;
+                opacity: 0.7;
+                transition: all 300ms;
+                transform: scale(.99);
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1);
+                }
             }
         }
+        &:hover {
+            background-color: transparent;
+        }
     }
+    
     .about-section-text {
         color: $default-text;
         margin-left: 1rem;
@@ -64,6 +79,7 @@
                             margin-top: 6px;
                             position:absolute;
                             width:25%;
+                            max-width: 300px;
                             height: 5px;
                             .bar{
                                 background-color:$primary-text;
@@ -82,17 +98,25 @@
     .about-section-container {
         display: block;
         margin-top: 0.5rem;
-        .about-section-image {
-            img{
-                width: 50%;
-                height: 50vw;
-                border: 2px solid $primary-text;
-                padding: 10px;
-                box-shadow: none;
-                opacity: 1;
-                transform: scale(1);
+
+        .image-blurbox {
+            background-color: transparent;
+            height: 50vw;
+            max-height: 100%;
+            .about-section-image {
+                img{
+                    width: 50%;
+                    height: 50vw;
+                    max-height: 100%;
+                    border: 2px solid $primary-text;
+                    padding: 10px;
+                    box-shadow: none;
+                    opacity: 1;
+                    transform: scale(1);
+                }
             }
         }
+
         .about-section-text {
             margin-left: 0;
             margin-top: 0.95rem;

@@ -3,6 +3,31 @@ import { Nav, Navbar } from 'react-bootstrap'
 import { navLinks } from './navLinks'
 
 function NavBar() {
+
+    const [prevScrollPos, setPrevScrollPos] = useState(0)
+    const [visible, setVisible] = useState(true)  
+  
+  
+    useEffect(() => {
+
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset
+    
+            if ((prevScrollPos > currentScrollPos) !== visible)
+            {
+                setVisible(prevScrollPos > currentScrollPos)
+            }
+    
+            setPrevScrollPos(currentScrollPos)
+            
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
+  
+    }, [prevScrollPos, visible])
+  
     const navRef = useRef(null)
 
     const [show, setShow] = useState(false)
@@ -16,7 +41,7 @@ function NavBar() {
     }
 
     return (
-        <Navbar expand="lg">
+        <Navbar className={`${visible ? "nav-show" : "nav-show-not"} ${prevScrollPos === 0 && "nav-no-shadow nav-show"}`}expand="lg">
             <Navbar.Brand className="nav-brand" href="#home">
                 LOGO
             </Navbar.Brand>
