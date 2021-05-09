@@ -8,7 +8,7 @@ const Experiences = forwardRef((props, ref) => {
     const [index, setIndex] = useState(0)
 
     return (
-        <div ref={ref}>
+        <div className="experience" ref={ref}>
             <SectionHeading index={2} heading="Experiences" />
             <Container className="experience-container">
                 <Row>

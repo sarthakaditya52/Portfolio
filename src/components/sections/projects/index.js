@@ -7,7 +7,7 @@ import { featuredProjects } from './projects.data'
 const Projects = forwardRef((props, ref) => {
     return (
         <>
-            <div ref={ref}>
+            <div className="projects" ref={ref}>
                 <SectionHeading index={3} heading={"My Projects"} />
                 <Container className="featured-project-container">
                     {featuredProjects.map((project, index) => 

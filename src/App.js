@@ -3,6 +3,8 @@ import Background from './components/Background'
 import Main from './components/Main'
 import SplashScreen from './components/SplashScreen'
 import { BrowserRouter as Router } from "react-router-dom"
+import { gsap } from 'gsap'
+import { CSSPlugin } from 'gsap/CSSPlugin'
 
 function App() {
 
@@ -11,8 +13,10 @@ function App() {
   useEffect(() => {
 
     document.title = "Sarthak Aditya"
-    
+   
     document.body.classList.add("bg-dark-black")        
+
+    gsap.registerPlugin( CSSPlugin )
 
     const timer = setTimeout(() => {
       document.body.classList.add("reduce-size")

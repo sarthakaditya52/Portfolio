@@ -5,7 +5,7 @@ import me from '../../assets/images/me.jpg'
 
 const About = forwardRef((props, ref) => {
     return (
-        <div ref={ref}>
+        <div className="about" ref={ref}>
             <SectionHeading index={1} heading="About" />
             <Container>
                 <div className="about-section-container">

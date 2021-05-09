@@ -36,7 +36,7 @@ function Main() {
       case "#experiences":
         scrollToDiv(experiences)
         break
-      case "#projects":
+      case "#work":
         scrollToDiv(projects)
         break
       case "#contact":
