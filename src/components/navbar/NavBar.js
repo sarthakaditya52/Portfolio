@@ -44,7 +44,7 @@ function NavBar({linkClick, refs}) {
 
     return (
         <Navbar className={`${visible ? "nav-show" : "nav-show-not"} ${prevScrollPos === 0 && "nav-no-shadow nav-show"}`}expand="lg">
-            <Navbar.Brand className="nav-brand" href="#home">
+            <Navbar.Brand className="nav-brand" href="https://sarthakaditya52.github.io">
                 <Logo nav={true} />
             </Navbar.Brand>
             <span onClick={toggleShow}>
@@ -68,7 +68,7 @@ function NavBar({linkClick, refs}) {
                             </span>
                         </Nav.Link>
                     )}
-                    <Nav.Link href={resume} className="nav-link-resume" download="Sarthak_Aditya_Fullstack">
+                    <Nav.Link href={resume} className="nav-link-resume" download="Sarthak_Aditya_Fullstack.pdf">
                         <div className="resume-link">
                             Resume
                         </div>
