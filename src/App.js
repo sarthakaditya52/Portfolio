@@ -10,10 +10,7 @@ function App() {
 
   const [splash, setSplash] = useState(true)
 
-  useEffect(() => {
-
-    document.title = "Sarthak Aditya"
-   
+  useEffect(() => { 
     document.body.classList.add("bg-dark-black")        
 
     gsap.registerPlugin( CSSPlugin )
