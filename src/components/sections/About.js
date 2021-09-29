@@ -17,7 +17,7 @@ const About = forwardRef((props, ref) => {
                     <div className="about-section-text">
                         <p>
                             Hi! I'm an India-based developer who loves building applications for the web and mobile devices. 
-                            I graduated from IIITD in January 2021 and my decipline was Electronics and Communication 
+                            I graduated from <span><a href="https://iiitd.ac.in/">IIIT-D</a></span> in January 2021 and my discipline was Electronics and Communication 
                             but in my third semester I took Advanced Programming and it turns out I really love programming and building applications.
                         </p>
                         <p>

@@ -53,12 +53,34 @@
                 margin-bottom: 0.5rem;
     
                 .desc-heading-index {
-                    color: $gray-600;
+                    color: rgb(167, 167, 136);
                     margin-right: 8px;
                 }
     
                 .desc-heading {
                     color: $primary-text;
+
+                    span a {
+                        color: $primary-text;
+                        text-decoration: none;
+                        position: relative;
+                        transition: all 500ms;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: $primary-text;
+                            visibility: hidden;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        &:hover::before {
+                            visibility: visible;
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }

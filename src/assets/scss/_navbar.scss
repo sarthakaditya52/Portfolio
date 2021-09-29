@@ -29,6 +29,11 @@
         border: none;
         transform: rotate(180deg);
 
+        &:focus {
+            outline: none;
+            border: none;
+        }
+
         .nav-icon {
             &:before {
                 width: 10px;
@@ -71,30 +76,34 @@
 
     }
 
-    .nav-links-container{
-        display: flex;
-        justify-content: center;
-        margin-right: 0.75rem;
-        font-size: $nav-size;
-        padding: 5px 0 5px 0;
+    #responsive-navbar-nav {
+        justify-content: flex-end;
+        
+        .nav-links-container{
+            display: flex;
+            justify-content: center;
+            margin-right: 0.75rem;
+            font-size: $nav-size;
+            padding: 5px 0 5px 0;
 
-        .nav-link-index {
-            color: $primary-text;
-            margin-right: 4px;
+            .nav-link-index {
+                color: $primary-text;
+                margin-right: 4px;
+            }
+            .nav-link-label {
+                color: $white;
+            }
         }
-        .nav-link-label {
-            color: $white;
-        }
-    }
 
-    .nav-link-resume {
-        margin-right: 1.75rem;
-        color: $primary-text !important;
+        .nav-link-resume {
+            margin-right: 1.75rem;
+            color: $primary-text !important;
 
-        .resume-link {
-            border-radius: 7px;
-            padding: 5px 10px 5px 10px;
-            border: 2px solid $primary-text;
+            .resume-link {
+                border-radius: 7px;
+                padding: 5px 10px 5px 10px;
+                border: 2px solid $primary-text;
+            }
         }
     }
 

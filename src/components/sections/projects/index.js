@@ -14,7 +14,7 @@ const Projects = forwardRef((props, ref) => {
                         <Row key={index}>
                             <Col className={`project-image-container ${index % 2 !== 0 && "odd"}`}>
                                 <div className="image-blurbox">
-                                    <a href={project.livelink ? project.livelink : project.gitlink}>
+                                    <a target="_blank" rel="noreferrer" href={project.livelink ? project.livelink : project.gitlink}>
                                         <Image className="project-image" src={project.image} rounded />
                                     </a>
                                 </div>
@@ -32,10 +32,10 @@ const Projects = forwardRef((props, ref) => {
                                 </div>
                                 <div className="project-links">
                                     {project.gitlink &&
-                                        <a href={project.gitlink}><i className="fab fa-github" /></a>
+                                        <a target="_blank" rel="noreferrer" href={project.gitlink}><i className="fab fa-github" /></a>
                                     }
                                     {project.livelink &&
-                                        <a href={project.livelink}><i className="fas fa-external-link-alt" /></a>
+                                        <a target="_blank" rel="noreferrer" href={project.livelink}><i className="fas fa-external-link-alt" /></a>
                                     }   
                                 </div>
                             </Col>

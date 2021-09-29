@@ -21,7 +21,7 @@ function Logo({nav}) {
         <div id="hex-container" className={`logo ${nav && "nav-logo-item"}`}>
             <svg id="hexagon" viewBox="0 0 100 100"  fill="none">
                 <g>
-                    <path stroke="#2dce5d" strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" d=" M 65, 40
+                    <path stroke="#ebd50f" strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" d=" M 65, 40
                         L 65, 33
                         L 50, 25
                         L 36, 33
@@ -33,7 +33,7 @@ function Logo({nav}) {
                         L 36, 58" />
                 </g>
                 <g>
-                    <path stroke="#2dce5d" strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" d="M 50, 5
+                    <path stroke="#ebd50f" strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" d="M 50, 5
                         L 11, 27
                         L 11, 72
                         L 50, 95

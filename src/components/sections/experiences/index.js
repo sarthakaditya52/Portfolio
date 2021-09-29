@@ -26,9 +26,9 @@ const Experiences = forwardRef((props, ref) => {
                                     <div className="desc-heading-index">
                                         {data.position} 
                                     </div>
-                                    { indexData !== 0 && 
+                                    { indexData !== 1 && 
                                         <div className="desc-heading">
-                                            @&nbsp;{data.company}
+                                            @&nbsp;<span><a href={data.url} target="_blank" rel="noreferrer">{data.shortName ? data.shortName : data.company}</a></span>
                                         </div>
                                     }
                                 </span>
