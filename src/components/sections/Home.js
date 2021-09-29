@@ -8,7 +8,7 @@ const Home = forwardRef((props, ref) => {
             <h2>I'm a fullstack developer.</h2>
             <div className="home-content">
                 I am a software developer who is always looking for an opportunity to work on exciting and challenging projects. 
-                Currently, I'm working on building highly responsive and functional web applications at <span><a href="https://www.plunes.com">Plunes</a></span>.
+                Currently, I'm working on building highly responsive and functional web applications at <span><a target="_blank" rel="noreferrer" href="https://www.plunes.com">Plunes</a></span>.
             </div>
             <div onClick={() => props.linkClick(props.aboutRef)} className="home-about-btn" size='lg'>
                 <a href="#about">See More</a>

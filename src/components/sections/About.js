@@ -7,7 +7,7 @@ const About = forwardRef((props, ref) => {
     return (
         <div className="about" ref={ref}>
             <SectionHeading index={1} heading="About" />
-            <Container>
+            <Container className="about-container"> 
                 <div className="about-section-container">
                     <div className="image-blurbox">
                         <div className="about-section-image">
@@ -17,7 +17,7 @@ const About = forwardRef((props, ref) => {
                     <div className="about-section-text">
                         <p>
                             Hi! I'm an India-based developer who loves building applications for the web and mobile devices. 
-                            I graduated from <span><a href="https://iiitd.ac.in/">IIIT-D</a></span> in January 2021 and my discipline was Electronics and Communication 
+                            I graduated from <span><a target="_blank" rel="noreferrer" href="https://iiitd.ac.in/">IIIT-D</a></span> in January 2021 and my discipline was Electronics and Communication 
                             but in my third semester I took Advanced Programming and it turns out I really love programming and building applications.
                         </p>
                         <p>

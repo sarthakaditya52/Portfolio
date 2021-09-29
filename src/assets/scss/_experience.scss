@@ -15,6 +15,7 @@
             border-left: 0.19rem solid $primary;
             height: 3.5rem;
             transition: all 330ms;
+            overflow: hidden;
 
             &:hover {
                 background-color: $primary;
@@ -131,7 +132,8 @@
         .desc-container {
             margin-top: 1rem;
             min-height: auto;
-
+            padding: 0rem;
+            
             .description{
                 .desc-heading-container{
                     flex: wrap;
@@ -146,9 +148,15 @@
             flex-direction: row;
             width: 100%;
             overflow-x: scroll;
+            white-space: nowrap;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
             .company-button{
                 border: none;
                 border-bottom: 0.19rem solid $primary;
+                overflow: unset;
 
                 &.active {
                     border: none;
@@ -156,5 +164,12 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 567px) {
+    
+    .experience-container{
+        padding: 0rem;
     }
 }
